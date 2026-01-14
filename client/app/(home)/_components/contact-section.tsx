@@ -54,7 +54,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="contact">
+    <section className="py-12 md:py-24 bg-background relative overflow-hidden" id="contact">
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <motion.h2 

@@ -14,7 +14,7 @@ export function Header() {
     <>
       <header
         style={{ ["--translate" as string]: translate }}
-        className="container fixed top-0 z-40 flex h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-transform duration-700">
+        className="container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-transform duration-700">
         {/* <Logo className="max-w-16" /> */}
         <Image
           src="/logo.png"

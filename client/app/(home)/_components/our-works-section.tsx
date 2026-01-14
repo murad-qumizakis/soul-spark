@@ -12,51 +12,88 @@ import { motion, useInView } from "motion/react"
 export const OurWorksSection = ({ projects }: { projects: Project[] }) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
-  return !!projects.length &&  (
-    <HorizontalScrollTrigger>
-      <div className="flex h-dvh items-center py-[7.5vw]">
-        <div ref={ref} className="flex flex-nowrap space-x-[2.5vw] px-[5.625rem]">
-          <Heading />
+
+  if (!projects.length) return null
+
+  return (
+    <>
+      {/* Desktop View (Horizontal Scroll) */}
+      <div className="hidden md:block">
+        <HorizontalScrollTrigger>
+          <div className="flex h-dvh items-center py-[7.5vw]">
+            <div ref={ref} className="flex flex-nowrap space-x-[2.5vw] px-[5.625rem]">
+              <Heading />
+              {projects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} isInView={isInView} />
+              ))}
+              <Ending />
+            </div>
+          </div>
+        </HorizontalScrollTrigger>
+      </div>
+
+      {/* Mobile View (Vertical List) */}
+      <div className="block md:hidden py-16 px-4 space-y-12">
+        <div className="space-y-6 mb-12">
+          <div className="flex items-center gap-3">
+             <h2 className="text-4xl font-bold tracking-tighter">Work</h2>
+             <div className="grid size-12 place-items-center rounded-full border border-muted text-sm font-medium">
+               13
+             </div>
+          </div>
+          <p className="text-muted-foreground text-lg">
+             A selection of our crafted work, built from scratch by our talented in-house team.
+          </p>
+        </div>
+
+        <div className="space-y-8">
           {projects.map((project, index) => (
-            <motion.a
-              href={`/case-studies/${project.slug}`}
-              className=""
-              key={project.id}
-              initial={{ opacity: 0, x: 100 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}>
-              <Card className="relative aspect-[1.25] min-w-[43.125vw] overflow-hidden bg-transparent text-primary-foreground ring-0 ring-primary transition-shadow duration-300 hover:ring-4">
-                <Image
-                  src={
-                    project.image
-                      ? `${process.env.NEXT_PUBLIC_API_URL}${project.image}`
-                      : "/project-placeholder-image.jpg"
-                  }
-                  alt={project.title}
-                  fill
-                  className="inset-0 -z-10 object-cover"
-                  priority={index === 0}
-                />
-                <div className="flex size-full flex-col gap-4">
-                  <div className="self-end">{project.isLatest && <Badge>Latest</Badge>}</div>
-                  <h2 className="variant-h2 mt-auto">{project.title}</h2>
-                  <div className="flex flex-wrap gap-4">
-                    {project.categories?.map((category) => (
-                      <Badge key={category} variant="outline">
-                        {category}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </Card>
-            </motion.a>
+             <ProjectCard key={project.id} project={project} index={index} isInView={true} isMobile />
           ))}
-          <Ending />
+        </div>
+
+        <div className="pt-8 flex flex-col items-center gap-4">
+           <h2 className="text-3xl font-bold tracking-tighter">View More</h2>
+           <AnimatedLink href="/case-studies" variant="outline">Case Studies</AnimatedLink>
         </div>
       </div>
-    </HorizontalScrollTrigger>
+    </>
   )
 }
+
+const ProjectCard = ({ project, index, isInView, isMobile = false }: { project: Project; index: number; isInView: boolean, isMobile?: boolean }) => (
+  <motion.a
+    href={`/case-studies/${project.slug}`}
+    className={isMobile ? "block w-full" : ""}
+    initial={{ opacity: 0, x: isMobile ? 0 : 100, y: isMobile ? 20 : 0 }}
+    animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: isMobile ? 0 : 100, y: isMobile ? 20 : 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}>
+    <Card className={`relative overflow-hidden bg-transparent text-primary-foreground ring-0 ring-primary transition-shadow duration-300 hover:ring-4 ${isMobile ? "aspect-[4/3] w-full" : "aspect-[1.25] min-w-[43.125vw]"}`}>
+      <Image
+        src={
+          project.image
+            ? `${process.env.NEXT_PUBLIC_API_URL}${project.image}`
+            : "/project-placeholder-image.jpg"
+        }
+        alt={project.title}
+        fill
+        className="inset-0 -z-10 object-cover"
+        priority={index === 0}
+      />
+      <div className="flex size-full flex-col gap-4 p-6">
+        <div className="self-end">{project.isLatest && <Badge>Latest</Badge>}</div>
+        <h2 className={`mt-auto font-bold ${isMobile ? "text-2xl" : "variant-h2"}`}>{project.title}</h2>
+        <div className="flex flex-wrap gap-2">
+          {project.categories?.map((category) => (
+            <Badge key={category} variant="outline" className="text-white border-white/40">
+              {category}
+            </Badge>
+          ))}
+        </div>
+      </div>
+    </Card>
+  </motion.a>
+)
 
 const Heading = () => {
   return (
