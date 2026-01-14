@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "aesthetic-webworks-production.up.railway.app",
+        hostname: "soul-spark-production.up.railway.app",
         pathname: "/uploads/**",
       },
     ],
