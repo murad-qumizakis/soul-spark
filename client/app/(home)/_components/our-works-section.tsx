@@ -33,28 +33,28 @@ export const OurWorksSection = ({ projects }: { projects: Project[] }) => {
       </div>
 
       {/* Mobile View (Vertical List) */}
-      <div className="block md:hidden py-16 px-4 space-y-12">
-        <div className="space-y-6 mb-12">
-          <div className="flex items-center gap-3">
-             <h2 className="text-4xl font-bold tracking-tighter">Work</h2>
-             <div className="grid size-12 place-items-center rounded-full border border-muted text-sm font-medium">
+      <div className="block md:hidden py-24 px-6 space-y-16">
+        <div className="space-y-8 mb-16">
+          <div className="flex items-center gap-4">
+             <h2 className="text-3xl font-bold tracking-tight text-foreground/90">Work</h2>
+             <div className="grid size-10 place-items-center rounded-full border border-border text-xs font-medium text-muted-foreground">
                13
              </div>
           </div>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
              A selection of our crafted work, built from scratch by our talented in-house team.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-20">
           {projects.map((project, index) => (
              <ProjectCard key={project.id} project={project} index={index} isInView={true} isMobile />
           ))}
         </div>
 
-        <div className="pt-8 flex flex-col items-center gap-4">
-           <h2 className="text-3xl font-bold tracking-tighter">View More</h2>
-           <AnimatedLink href="/case-studies" variant="outline">Case Studies</AnimatedLink>
+        <div className="pt-12 flex flex-col items-center gap-6">
+           <h2 className="text-2xl font-bold tracking-tight">View More</h2>
+           <AnimatedLink href="/case-studies" variant="outline" className="px-8 h-12">Case Studies</AnimatedLink>
         </div>
       </div>
     </>

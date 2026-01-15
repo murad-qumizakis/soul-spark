@@ -54,9 +54,9 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-12 md:py-24 bg-background relative overflow-hidden" id="contact">
-      <div className="container px-4 md:px-6">
-        <div className="mx-auto max-w-2xl text-center mb-12">
+    <section className="py-24 md:py-32 bg-background relative overflow-hidden" id="contact">
+      <div className="container px-6 md:px-6">
+        <div className="mx-auto max-w-2xl text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export function ContactSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-muted-foreground md:text-xl"
+            className="mt-6 text-muted-foreground md:text-xl"
           >
             Have a project in mind? Let's build something amazing together.
           </motion.p>
@@ -81,15 +81,15 @@ export function ContactSection() {
           className="mx-auto max-w-xl"
         >
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel className="text-base">Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="John Doe" {...field} />
+                      <Input placeholder="John Doe" {...field} className="h-14 px-4 text-lg" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -100,9 +100,9 @@ export function ContactSection() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="text-base">Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="john@example.com" {...field} />
+                      <Input placeholder="john@example.com" {...field} className="h-14 px-4 text-lg" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -113,11 +113,11 @@ export function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel className="text-base">Message</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Tell us about your project..."
-                        className="min-h-[120px]"
+                        className="min-h-[160px] p-4 text-lg"
                         {...field}
                       />
                     </FormControl>
@@ -125,7 +125,7 @@ export function ContactSection() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="w-full" size="lg">
+              <Button type="submit" className="w-full h-14 text-lg" size="lg">
                 Send Message
               </Button>
             </form>
