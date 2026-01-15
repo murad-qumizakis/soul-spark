@@ -14,20 +14,15 @@ export function Header() {
     <>
       <header
         style={{ ["--translate" as string]: translate }}
-        className="container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-transform duration-700">
-        {/* <Logo className="max-w-16" /> */}
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          width={128}
-          height={64}
-          className="max-w-32"
-          style={{ width: "auto", height: "fit" }}
-        />
+        className={cn(
+          "container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-all duration-700",
+          scrollPosition.top > 50 ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24" : ""
+        )}>
+        <h1 className="text-2xl font-bold tracking-tighter md:text-3xl">SOULSPARK MEDIA</h1>
         <AnimatedLink
           variant="outline"
           href="/admin"
-          className="ms-auto flex h-10 items-center px-6 py-0 text-base font-medium">
+          className="ms-auto hidden md:flex h-10 items-center px-6 py-0 text-base font-medium">
           Admin Panel
         </AnimatedLink>
         <DialogRoot>
@@ -37,11 +32,7 @@ export function Header() {
           <DialogContent title="Main Menu"></DialogContent>
         </DialogRoot>
       </header>
-      <div
-        style={{ ["--translate" as string]: translate }}
-        className="pointer-events-none fixed top-0 z-30 h-[100px] w-full translate-y-[calc(var(--translate)_*_-100%)] transition-transform delay-100 duration-300">
-        <div className="h-full w-full backdrop-blur-md" />
-      </div>
+      {/* Background blur div removed as we are applying styles directly to header for better control */}
     </>
   )
 }

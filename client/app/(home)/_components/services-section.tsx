@@ -51,7 +51,7 @@ export function ServicesSection() {
               <Button variant="ghost" className="w-full py-4 md:w-auto">
                 Let's talk
               </Button>
-              <Badge size="lg" variant="outline" className="w-full justify-center border-current py-4 md:w-auto">
+              <Badge size="lg" variant="outline" className="w-full justify-center border-current py-4 whitespace-nowrap md:w-auto">
                 020 3456 7890
               </Badge>
             </div>

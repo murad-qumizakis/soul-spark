@@ -13,10 +13,10 @@ export function TrustSection() {
       <div className="container py-24 md:py-huge">
         <div className="flex flex-col gap-16 md:flex-row md:items-end md:justify-between md:gap-6">
           <div className="flex flex-col gap-8 md:block md:gap-6">
-            <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-huge">
+            <TextSlideUpByWord as="h2" className="variant-h2 text-3xl md:text-huge">
               Your Digital Partner
             </TextSlideUpByWord>
-            <TextSlideUpByLine as="h4" className="variant-h4 mt-6 md:mt-0">
+            <TextSlideUpByLine as="h4" className="variant-h4 mt-6 text-lg md:mt-0 md:text-xl">
               {`We partner with companies of all sizes to solve\ncomplex business challenges and define their digital\nstrategies and objectives that deliver results. We\nhelp bring ideas to life and create brands, websites\n& digital products that work.`}
             </TextSlideUpByLine>
             <div className="mt-12 md:mt-huge">
