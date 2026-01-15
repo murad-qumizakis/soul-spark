@@ -9,17 +9,17 @@ import { AnimatePresence, motion } from "motion/react"
 export function WhatWeDoSection() {
   return (
     <section className="bg-[#111111] bg-radialToBr text-primary-foreground">
-      <div className="container py-[7.5vw]">
-        <TextSlideUpByWord as="h5" className="variant-h5 mb-4 overflow-y-hidden">
+      <div className="container py-24 md:py-[7.5vw]">
+        <TextSlideUpByWord as="h5" className="variant-h5 mb-8 overflow-y-hidden md:mb-4">
           Our team of experts can help you with...
         </TextSlideUpByWord>
-        <div className="space-y-4">
+        <div className="space-y-8 md:space-y-4">
           {categories.map((category) =>
             !category.topProject ? null : (
               <motion.a
                 key={category.id}
                 href={`/category/${category.id}`}
-                className="flex items-center justify-between gap-4 overflow-hidden"
+                className="flex flex-col gap-6 overflow-hidden border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between md:gap-4 md:border-none md:pb-0"
                 initial="initial"
                 whileHover="hovered">
                 <motion.h2
@@ -27,7 +27,7 @@ export function WhatWeDoSection() {
                     initial: { scale: 1, transition: { duration: 0.3 } },
                     hovered: { scale: 0.95, transition: { duration: 0.3 } },
                   }}
-                  className="variant-h2 origin-left">
+                  className="origin-left text-3xl font-semibold md:variant-h2">
                   <TextSlideUpByLine>{category.title}</TextSlideUpByLine>
                 </motion.h2>
                 <motion.div
@@ -35,12 +35,12 @@ export function WhatWeDoSection() {
                     initial: { opacity: 0, x: -12, transition: { duration: 0.3 } },
                     hovered: { opacity: 1, x: 0, transition: { duration: 0.3 } },
                   }}
-                  className="flex items-center gap-6">
+                  className="flex items-center gap-4 md:gap-6">
                   <div>
-                    <p className="variant-p text-muted">Latest Case Study</p>
-                    <h5 className="variant-h5">{category.topProject.title}</h5>
+                    <p className="text-sm text-muted-foreground md:variant-p md:text-muted">Latest Case Study</p>
+                    <h5 className="font-medium md:variant-h5">{category.topProject.title}</h5>
                   </div>
-                  <div className="relative size-[72px] overflow-clip rounded-full bg-muted">
+                  <div className="relative size-12 overflow-clip rounded-full bg-muted md:size-[72px]">
                     <Image
                       src="/project-placeholder-image.jpg"
                       alt={category.topProject.title}
@@ -49,6 +49,7 @@ export function WhatWeDoSection() {
                     />
                   </div>
                   <svg
+                    className="hidden md:block" // Hide arrow on mobile to save space or adjust size
                     width="48.7295674px"
                     height="34.7295396px"
                     viewBox="0 0 48.7295674 34.7295396"
@@ -74,24 +75,24 @@ export function WhatWeDoSection() {
             )
           )}
         </div>
-        <div className="my-[4rem] h-[1px] w-full bg-[#fff3]"></div>
-        <div className="flex items-end justify-between">
+        <div className="my-12 h-[1px] w-full bg-[#fff3] md:my-[4rem]"></div>
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
             <TextSlideUpByLine
               as="h2"
-              className="variant-h2 mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              className="variant-h2 mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent md:mb-8">
               Creative Agency
             </TextSlideUpByLine>
-            <h5 className="variant-h5">
+            <h5 className="variant-h5 text-lg leading-relaxed md:text-2xl">
               We’re an award-winning creative agency based in London, focused on E-Commerce, Web Design London, Digital
               Products, Branding and SEO.
             </h5>
           </div>
-          <div className="flex gap-4">
-            <Badge size="lg" variant="outline" className="border-primary">
+          <div className="flex flex-wrap gap-4 md:flex-nowrap">
+            <Badge size="lg" variant="outline" className="border-primary py-2 text-base md:py-4 md:text-lg">
               300+ Projects
             </Badge>
-            <Badge size="lg" variant="outline" className="border-primary">
+            <Badge size="lg" variant="outline" className="border-primary py-2 text-base md:py-4 md:text-lg">
               15 Awards
             </Badge>
           </div>
