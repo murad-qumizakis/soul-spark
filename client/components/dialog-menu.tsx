@@ -106,21 +106,26 @@ function DialogContentCore(
                     <div className="p-[--padding]">
                       {/* Nav menu */}
                       <div className="my-[calc(16px_+_24*(100vw_-_576px)/1024)] space-y-4">
-                        {["Case Studies", "Our Agency", "Contact Us", "News"].map((menu, i) => (
+                        {[
+                          { title: "Case Studies", href: "/case-studies" },
+                          { title: "Our Agency", href: "/agency" },
+                          { title: "Contact Us", href: "/contact" },
+                          { title: "News", href: "/news" },
+                        ].map(({ title, href }, i) => (
                           <motion.div
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: i * 0.2, duration: 0.2 }}
                             viewport={{ once: false }}
                             style={{ opacity: 0 }}
-                            key={menu}
+                            key={title}
                             className="flex items-center gap-4">
                             <AnimatedLink
-                              href={`#`}
+                              href={href}
                               className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
-                              {menu}
+                              {title}
                             </AnimatedLink>
 
-                            {menu === "Case Studies" && (
+                            {title === "Case Studies" && (
                               <div className="font-regular variant-h5 grid size-[72px] place-items-center rounded-full border border-muted">
                                 <span>13</span>
                               </div>
