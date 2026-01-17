@@ -8,12 +8,11 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "motion/react"
 
-const news = [
   {
     id: 1,
     title: "The Agentic Web: Why AI Agents Are the New UI",
     date: "January 14, 2025",
-    categories: ["Insights", "Tech"],
+    categories: ["AI Agents", "Tech"],
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2600&auto=format&fit=crop",
     excerpt: "We are moving beyond chatbots. The next generation of the web will be built for autonomous AI agents that browse, negotiate, and act on your behalf.",
   },
@@ -21,7 +20,7 @@ const news = [
     id: 2,
     title: "Design Systems in 2025: From Consistency to Adaptability",
     date: "December 08, 2024",
-    categories: ["Design", "Work"],
+    categories: ["Brand Strategy", "Design"],
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2600&auto=format&fit=crop",
     excerpt: "Static component libraries are dead. Learn how adaptive design systems use context and intent to create fluid, personalized user experiences.",
   },
@@ -29,7 +28,7 @@ const news = [
     id: 3,
     title: "Sustainable Web: Reducing Digital Carbon Footprints",
     date: "November 22, 2024",
-    categories: ["Insights", "Strategy"],
+    categories: ["Eco-Tech", "Strategy"],
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2600&auto=format&fit=crop",
     excerpt: "Every byte counts. How optimizing your code, assets, and hosting not only boosts performance but drastically reduces your site's environmental impact.",
   },
@@ -37,14 +36,14 @@ const news = [
     id: 4,
     title: "Spatial Computing: Designing for the Post-Screen Era",
     date: "October 10, 2024",
-    categories: ["Interviews", "Tech"],
+    categories: ["Spatial Design", "Tech"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2600&auto=format&fit=crop",
     excerpt: "As mixed reality headsets hit the mainstream, we sat down with our XR lead to discuss the challenges of designing interfaces that float in the real world.",
   },
 ]
 
 // Exact categories from screenshot
-const categories = ["All", "News", "Insights", "Work", "Interviews"]
+const categories = ["All", "AI Agents", "Spatial Design", "Eco-Tech", "Brand Strategy"]
 
 export default function NewsPage() {
   const [activeCategory, setActiveCategory] = useState("All")
