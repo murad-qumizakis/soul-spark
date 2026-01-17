@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import { motion, AnimatePresence } from "motion/react"
 
+const news = [
   {
     id: 1,
     title: "The Agentic Web: Why AI Agents Are the New UI",
