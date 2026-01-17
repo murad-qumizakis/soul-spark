@@ -119,11 +119,13 @@ function DialogContentCore(
                             style={{ opacity: 0 }}
                             key={title}
                             className="flex items-center gap-4">
-                            <AnimatedLink
-                              href={href}
-                              className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
-                              {title}
-                            </AnimatedLink>
+                            <RadixDialog.Close asChild>
+                              <AnimatedLink
+                                href={href}
+                                className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
+                                {title}
+                              </AnimatedLink>
+                            </RadixDialog.Close>
 
                             {title === "Case Studies" && (
                               <div className="font-regular variant-h5 grid size-[72px] place-items-center rounded-full border border-muted">

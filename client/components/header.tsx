@@ -3,8 +3,9 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import useDetectScroll from "@smakss/react-scroll-direction"
-import { DialogContent, DialogRoot, DialogTrigger } from "./dialog-menu"
-import { AnimatedLink } from "./ui/animated-button"
+import { createContext, forwardRef, useContext, useState } from "react"
+import Link from "next/link"
+import { AnimatedLink } from "@/components/ui/animated-button"
 import { BurgerMenuBtn } from "./ui/burger-menu-btn"
 
 export function Header() {
@@ -18,7 +19,9 @@ export function Header() {
           "container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-all duration-700",
           scrollPosition.top > 50 ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24" : ""
         )}>
-        <h1 className="text-2xl font-bold tracking-tighter md:text-3xl">SOULSPARK MEDIA</h1>
+        <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl">
+          SOULSPARK MEDIA
+        </Link>
         <AnimatedLink
           variant="outline"
           href="/admin"

@@ -5,6 +5,7 @@ type Project = {
   categories?: string[]
   categoryIds?: string[]
   isLatest?: boolean
+  slug?: string
 }
 export const projects: Project[] = [
   {
@@ -33,9 +34,15 @@ export const projects: Project[] = [
     image: "/01_Estate-Agency-Web-Design-London.jpg", // Replace with actual image URL
     categories: ["UI/UX Design", "Website Design"],
   },
-].map(project => ({...project, id: encodeURIComponent(project.title.toLowerCase().replace(/\s+/g, '-')), 
+].map(project => {
+  const slug = project.title.toLowerCase().replace(/\s+/g, '-')
+  return {
+    ...project, 
+    id: encodeURIComponent(slug), 
+    slug: slug,
     categoryIds: project.categories.map(encodeURIComponent)
-}))
+  }
+})
 
 type Category = {
     id: string

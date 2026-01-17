@@ -15,7 +15,7 @@ export function ServicesSection() {
       <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-huge">
         We’re good at
       </TextSlideUpByWord>
-      <div className="grid grid-cols-1 gap-12 items-end md:grid-cols-[1fr_50.75vw] md:gap-0">
+      <div className="grid grid-cols-1 gap-12 items-end md:grid-cols-[1fr_minmax(400px,50.75vw)] md:gap-0">
         <div>
           <div className="mt-6 space-y-4">
             <p className="text-muted-foreground">Services</p>
@@ -27,7 +27,7 @@ export function ServicesSection() {
               "Brand Identities",
               "SEO Optimisation",
             ].map((item) => (
-              <Link href={`/services/#`} key={item} className="block overflow-hidden text-3xl font-semibold md:variant-h3 md:text-[2vw]">
+              <Link href={`/services/#`} key={item} className="block overflow-hidden text-3xl font-semibold md:variant-h3 md:text-[2vw] md:leading-tight">
                 <TextSlideUpByText>{item}</TextSlideUpByText>
               </Link>
             ))}
@@ -39,7 +39,7 @@ export function ServicesSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           variants={{ visible: { scaleY: 1 }, hidden: { scaleY: 0 } }}
           viewport={{ once: true }}
-          className="w-full origin-top bg-primary p-0 text-primary-foreground">
+          className="w-full origin-top bg-primary p-0 text-primary-foreground md:h-full md:flex md:items-center">
           <motion.div
             transition={{ delay: 0.9 }}
             variants={{ visible: { opacity: 1 }, hidden: { opacity: 0 } }}

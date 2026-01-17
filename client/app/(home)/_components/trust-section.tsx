@@ -51,7 +51,7 @@ export function TrustSection() {
                   [500, "Satisfied Customers"],
                 ] as const
               ).map((item) => (
-                <div key={item[1]} className="flex-1 space-y-2 p-6 text-center md:space-y-4 md:p-[2vw]">
+                <div key={item[1]} className="flex-1 space-y-2 p-6 text-center md:space-y-4 md:p-[2vw] md:min-w-[200px]">
                   <h2 className="text-4xl font-bold md:variant-h2">{item[0]}</h2>
                   <h4 className="text-sm md:variant-h4 whitespace-nowrap">{item[1]}</h4>
                 </div>

@@ -18,8 +18,8 @@ export function WhatWeDoSection() {
             !category.topProject ? null : (
               <motion.a
                 key={category.id}
-                href={`/category/${category.id}`}
-                className="flex flex-col gap-6 overflow-hidden border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between md:gap-4 md:border-none md:pb-0"
+                href={`/case-studies/${category.topProject.slug}`}
+                className="group flex flex-col gap-6 overflow-hidden border-b border-white/10 pb-6 md:flex-row md:items-center md:justify-between md:gap-4 md:border-none md:pb-0"
                 initial="initial"
                 whileHover="hovered">
                 <motion.h2
