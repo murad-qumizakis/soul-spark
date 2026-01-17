@@ -8,8 +8,8 @@ import { AchievementsBadge } from "./achievements-badge"
 export const HeroSection = () => {
   return (
     <section>
-      <div className="container flex min-h-[100svh] flex-col justify-end gap-y-16 py-16 md:gap-y-huge md:py-huge">
-        <div className="max-w-7xl text-4xl font-semibold leading-tight tracking-tight md:text-huge/tight text-foreground/90">
+      <div className="container flex min-h-[100svh] flex-col justify-end gap-y-16 py-16 md:gap-y-32 md:py-32">
+        <div className="max-w-7xl text-4xl font-semibold leading-tight tracking-tight md:text-7xl/tight text-foreground/90">
           <TextSlideUpByWord
             delay={1}
             staggerChildren={0.1}
