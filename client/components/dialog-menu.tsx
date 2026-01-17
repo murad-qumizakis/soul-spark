@@ -108,7 +108,8 @@ function DialogContentCore(
                       <div className="my-[calc(16px_+_24*(100vw_-_576px)/1024)] space-y-4">
                         {[
                           { title: "Case Studies", href: "/case-studies" },
-                          { title: "Our Agency", href: "/agency" },
+                          { title: "Services", href: "/services" },
+                          { title: "Testimonials", href: "/testimonials" },
                           { title: "Contact Us", href: "/contact" },
                           { title: "News", href: "/news" },
                         ].map(({ title, href }, i) => (

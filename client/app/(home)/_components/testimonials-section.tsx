@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Link from "next/link"
 import { TextSlideUpByText, TextSlideUpByWord } from "@/components/higher-order-text-animate-components"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Testimonial } from "@/lib/schemas"
@@ -76,19 +77,22 @@ function TestimonialComponent({ id, author: { name, company, image }, content }:
     <motion.div
       ref={target}
       style={{ ["--progress" as string]: scrollYProgress }}
-      className="rounded-[32px] bg-transparent p-6 text-background ring-1 ring-[#fff3] md:scale-[calc(0.8_+_(var(--progress)_*_0.2))] md:p-[4vw]">
-      <div className="mb-6 mt-6 md:mb-8 md:mt-10">
-        <p className="text-xl font-medium leading-relaxed md:variant-h2 md:text-[2vw]">"{content}"</p>
+      className="rounded-[24px] bg-transparent p-6 text-background ring-1 ring-[#fff3] md:scale-[calc(0.9_+_(var(--progress)_*_0.1))] md:p-[2vw]">
+      <div className="mb-4 mt-4 md:mb-6 md:mt-6">
+        <p className="line-clamp-3 text-lg font-medium leading-relaxed md:text-xl">"{content}"</p>
+        <Link href="/testimonials" className="mt-2 inline-block text-sm font-semibold text-primary hover:underline">
+          Read full review
+        </Link>
       </div>
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-center gap-4 md:gap-8">
-          <Avatar className="size-12 md:variant-h5 md:size-auto">
+        <div className="flex items-center gap-4 md:gap-6">
+          <Avatar className="size-10 md:size-12">
             <AvatarImage src={image ? `${process.env.NEXT_PUBLIC_API_URL}${image}` : undefined} />
             <AvatarFallback>{name.charAt(0)}</AvatarFallback>
           </Avatar>
-          <h5 className="text-lg font-semibold md:variant-h5 text-muted">{name}</h5>
+          <h5 className="text-base font-semibold text-muted md:text-lg">{name}</h5>
         </div>
-        <h4 className="text-lg text-primary md:variant-h4">{company}</h4>
+        <h4 className="text-base text-primary md:text-lg">{company}</h4>
       </div>
     </motion.div>
   )
