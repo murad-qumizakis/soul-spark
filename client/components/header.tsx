@@ -22,7 +22,7 @@ export function Header() {
             ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24 text-foreground" 
             : "text-white md:text-foreground"
         )}>
-        <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl">
+        <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl whitespace-nowrap">
           SOULSPARK MEDIA
         </Link>
         <AnimatedLink
