@@ -89,7 +89,7 @@ export default function NewsPage() {
         </div>
 
         {/* Vertical Feed */}
-        <div className="space-y-20 md:space-y-32">
+        <div className="space-y-12 md:space-y-20">
           <AnimatePresence mode="popLayout">
             {filteredNews.map((item) => (
                 <motion.div 
@@ -101,7 +101,7 @@ export default function NewsPage() {
                     transition={{ duration: 0.4 }}
                     className="group"
                 >
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-3">
                         {/* Top Tags - Purple Dashed Style from Screenshot Inspiration */}
                         <div className="flex flex-wrap items-center gap-2">
                              {item.categories.map((cat, idx) => (
@@ -122,7 +122,7 @@ export default function NewsPage() {
                         </Link>
 
                         {/* Image */}
-                        <Link href={`/news/${item.id}`} className="block w-full overflow-hidden mt-2">
+                        <Link href={`/news/${item.id}`} className="block w-full overflow-hidden">
                              <div className="relative aspect-[4/3] w-full bg-muted transition-transform duration-700 group-hover:scale-[1.02] md:aspect-[16/9]">
                                 <Image 
                                     src={item.image} 
@@ -134,7 +134,7 @@ export default function NewsPage() {
                         </Link>
 
                         {/* Excerpt */}
-                         <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground mt-2">
+                         <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
                             {item.excerpt}
                         </p>
                     </div>
