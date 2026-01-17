@@ -86,26 +86,26 @@ function DialogContentCore(
                   animate="open"
                   exit="closed"
                   className={cn(
-                    "relative mx-auto flex max-w-[940px] origin-bottom items-center justify-center",
+                    "relative mx-auto flex w-[95vw] max-w-[940px] origin-bottom items-center justify-center",
                     className
                   )}>
                   <RadixDialog.Title className="hidden">{title}</RadixDialog.Title>
                   {/* {children} */}
-                  <div className="h-[90dvh] w-[940px] overflow-y-auto rounded-[calc(16px_+_16*(100vw_-_576px)/1024)] bg-foreground text-background [--padding:0_calc(32px_+_48*(100vw_-_576px)/1024)]">
-                    <div className="*: sticky top-0 flex items-center justify-between bg-inherit p-[--padding] pt-[calc(32px_+_48*(100vw_-_576px)/1024)]">
+                  <div className="h-[90dvh] w-full overflow-y-auto rounded-3xl bg-foreground text-background">
+                    <div className="sticky top-0 z-10 flex items-center justify-between bg-inherit p-6 md:p-12">
                       <TextFadeInByText
                         as="h5"
-                        className="font-base text-[calc(16px_+_8*(100vw_-_576px)/1024)] leading-snug">
+                        className="font-base text-lg leading-snug text-muted-foreground md:text-xl">
                         Navigation
                       </TextFadeInByText>
-                      <RadixDialog.Close className="group grid size-10 place-items-center rounded-full bg-[#ffffff26] transition-colors hover:bg-[#ffffff40]">
+                      <RadixDialog.Close className="group grid size-10 place-items-center rounded-full bg-white/10 transition-colors hover:bg-white/25">
                         <X className="transition-transform group-hover:scale-110" />
                       </RadixDialog.Close>
                     </div>
 
-                    <div className="p-[--padding]">
+                    <div className="p-6 md:p-12 pt-0">
                       {/* Nav menu */}
-                      <div className="my-[calc(16px_+_24*(100vw_-_576px)/1024)] space-y-4">
+                      <div className="mb-12 space-y-4 md:space-y-6">
                         {[
                           { title: "Case Studies", href: "/case-studies" },
                           { title: "Services", href: "/services" },
@@ -115,7 +115,7 @@ function DialogContentCore(
                         ].map(({ title, href }, i) => (
                           <motion.div
                             whileInView={{ opacity: 1 }}
-                            transition={{ delay: i * 0.2, duration: 0.2 }}
+                            transition={{ delay: i * 0.1, duration: 0.2 }}
                             viewport={{ once: false }}
                             style={{ opacity: 0 }}
                             key={title}
@@ -123,13 +123,13 @@ function DialogContentCore(
                             <RadixDialog.Close asChild>
                               <AnimatedLink
                                 href={href}
-                                className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
+                                className="rounded-none border-0 bg-transparent p-0 text-3xl font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0 md:text-5xl lg:text-6xl">
                                 {title}
                               </AnimatedLink>
                             </RadixDialog.Close>
 
                             {title === "Case Studies" && (
-                              <div className="font-regular variant-h5 grid size-[72px] place-items-center rounded-full border border-muted">
+                              <div className="grid size-12 place-items-center rounded-full border border-muted text-sm md:size-[72px] md:text-xl">
                                 <span>13</span>
                               </div>
                             )}
@@ -137,40 +137,34 @@ function DialogContentCore(
                         ))}
                       </div>
 
-                      <div className="mt-8 flex items-center justify-between gap-4 py-4">
-                        <div className="font-base flex flex-wrap gap-x-8 gap-y-2 text-base">
-                          <p className="block w-full text-muted">Follow Us</p>
-                          {[
-                            { href: "/", label: "Instagram" },
-                            { href: "/", label: "LinkedIn" },
-                            { href: "/", label: "Twitter" },
-                          ].map(({ href, label }, i) => (
-                            <div key={label} className="overflow-hidden">
-                              <motion.div
-                                whileInView={{ translateY: "0%" }}
-                                transition={{ delay: 0.3 + i * 0.2, duration: 0.2 }}
-                                viewport={{ once: false }}
-                                style={{ translateY: "100%" }}>
-                                <Link
-                                  href={href}
-                                  className="relative before:absolute before:right-0 before:top-0 before:size-1 before:translate-y-2 before:border-r-[1.5px] before:border-t-[1.5px] before:border-background before:opacity-0 before:transition-all before:content-[''] hover:before:translate-x-2 hover:before:translate-y-0 hover:before:opacity-100">
-                                  {label}
-                                </Link>
-                              </motion.div>
-                            </div>
-                          ))}
+                      <div className="mt-8 flex flex-col justify-between gap-8 border-t border-white/10 py-8 md:flex-row md:items-center">
+                        <div className="font-base flex flex-col gap-4 text-base md:flex-row md:gap-8">
+                          <p className="text-muted-foreground">Follow Us</p>
+                          <div className="flex flex-wrap gap-6">
+                            {[
+                                { href: "/", label: "Instagram" },
+                                { href: "/", label: "LinkedIn" },
+                                { href: "/", label: "Twitter" },
+                            ].map(({ href, label }, i) => (
+                                <div key={label} className="overflow-hidden">
+                                <motion.div
+                                    whileInView={{ translateY: "0%" }}
+                                    transition={{ delay: 0.3 + i * 0.1, duration: 0.2 }}
+                                    viewport={{ once: false }}
+                                    style={{ translateY: "100%" }}>
+                                    <Link
+                                    href={href}
+                                    className="relative hover:text-white/80 hover:underline">
+                                    {label}
+                                    </Link>
+                                </motion.div>
+                                </div>
+                            ))}
+                          </div>
                         </div>
-                        <BlockSlideUp transition={{ delay: 0.6, duration: 0.3 }}>
-                          <AnimatedLink href="/admin">Admin Panel</AnimatedLink>
+                        <BlockSlideUp transition={{ delay: 0.4, duration: 0.3 }}>
+                          <AnimatedLink href="/admin" className="text-sm md:text-base">Admin Panel</AnimatedLink>
                         </BlockSlideUp>
-                        {/* <div className="overflow-hidden">
-                          <motion.div
-                            whileInView={{ translateY: "0%", opacity: 1 }}
-                            transition={{ delay: 0.6, duration: 0.3 }}
-                            viewport={{ once: false }}
-                            style={{ translateY: "100%", opacity: 0 }}>
-                          </motion.div>
-                        </div> */}
                       </div>
                     </div>
                   </div>
