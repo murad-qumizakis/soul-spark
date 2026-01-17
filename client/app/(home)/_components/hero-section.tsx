@@ -69,12 +69,12 @@ export const HeroSection = () => {
             <AchievementsBadge />
           </BlockSlideUp>
           <BlockSlideUp containerClassName="ms-0 md:ms-auto max-w-lg" transition={{ delay: 1, duration: 0.3 }}>
-            <p className="text-lg leading-relaxed text-muted-foreground md:text-[28.8px]">
+            <p className="text-lg leading-relaxed text-foreground md:text-[28.8px]">
               We build engaging websites, brands & innovative e-commerce solutions.
             </p>
           </BlockSlideUp>
           <BlockSlideUp transition={{ delay: 1, duration: 0.3 }}>
-            <AnimatedLink href="/case-studies" className="h-12 px-8">Case Studies</AnimatedLink>
+            <AnimatedLink href="/case-studies" className="h-12 px-8" aria-label="View Case Studies">Case Studies</AnimatedLink>
           </BlockSlideUp>
         </div>
       </div>

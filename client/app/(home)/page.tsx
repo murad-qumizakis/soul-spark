@@ -34,7 +34,7 @@ const Page = async () => {
       <TrustSection />
       <section>
         <div className="container">
-          <ParallaxImage className="aspect-[1.75176]" src="/AW_Team_01-800x600.jpg" alt="Dev" />
+          <ParallaxImage className="aspect-video w-full" src="/AW_Team_01-800x600.jpg" alt="SoulSpark Team collaborating on digital product strategy" />
         </div>
       </section>
       <PartnersSection />
