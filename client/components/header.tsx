@@ -25,12 +25,7 @@ export function Header() {
         <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl whitespace-nowrap">
           SOULSPARK MEDIA
         </Link>
-        <AnimatedLink
-          variant="outline"
-          href="/admin"
-          className="ms-auto hidden md:flex h-10 items-center px-6 py-0 text-base font-medium">
-          Admin Panel
-        </AnimatedLink>
+
         <DialogRoot>
           <DialogTrigger asChild>
             <BurgerMenuBtn />
