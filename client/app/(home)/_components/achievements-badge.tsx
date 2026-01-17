@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 
-const achievements: [number, string][] = [
-  [500, "Satisfied Customers"],
-  [15, "Website Awards"],
-  [20, "Years on the market"],
+const achievements: [number | string, string][] = [
+  ["50+", "Digital Products"],
+  ["15+", "Industry Awards"],
+  ["99%", "Client Retention"],
 ]
 
 const variants = {
