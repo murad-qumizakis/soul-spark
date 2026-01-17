@@ -12,6 +12,30 @@ const MotionCard = motion.create(Card)
 export function ServicesSection() {
   return (
     <section className="container py-24 md:py-24">
+      {/* Mobile Layout (Stripe Modular) */}
+      <div className="flex flex-col gap-8 md:hidden">
+        <div>
+          <h4 className="text-base font-bold text-stripe-purple">Modular solutions</h4>
+        </div>
+        <h2 className="text-4xl font-bold leading-tight text-stripe-dark-blue">
+            A fully integrated suite of financial and payments products
+        </h2>
+        <p className="text-lg leading-relaxed text-muted-foreground">
+            Reduce costs, grow revenue, and run your business more efficiently on a fully integrated, AI-powered platform. Use Stripe to handle all of your payments-related needs, manage revenue operations, and launch (or invent) new business models.
+        </p>
+
+        <div className="grid grid-cols-3 gap-4">
+             {/* Mocking the icon grid from screenshot */}
+             {[1, 2, 3, 4, 5, 6].map(i => (
+                 <div key={i} className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center">
+                    <div className="size-8 rounded-full bg-slate-100"></div>
+                 </div>
+             ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout (Original) */}
+      <div className="hidden md:block">
       <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-6xl">
         We’re good at
       </TextSlideUpByWord>
@@ -57,6 +81,7 @@ export function ServicesSection() {
             </div>
           </motion.div>
         </MotionCard>
+      </div>
       </div>
     </section>
   )

@@ -18,7 +18,9 @@ export function Header() {
         style={{ ["--translate" as string]: translate }}
         className={cn(
           "container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-all duration-700",
-          scrollPosition.top > 50 ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24" : ""
+          scrollPosition.top > 50 
+            ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24 text-foreground" 
+            : "text-white md:text-foreground"
         )}>
         <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl">
           SOULSPARK MEDIA

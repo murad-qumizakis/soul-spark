@@ -3,12 +3,54 @@
 import { BlockSlideUp } from "@/components/higher-order-block-animate-components"
 import { TextSlideUpByLine, TextSlideUpByWord } from "@/components/higher-order-text-animate-components"
 import { AnimatedLink } from "@/components/ui/animated-button"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import { allLogos } from "@/data/logos" // Ensure this path is correct or use logic to get logos
+import Image from "next/image"
 import { AchievementsBadge } from "./achievements-badge"
+
+const stripeLogos = [
+  { name: "OpenAI", src: "/logos/openai.svg" }, // Placeholders, will use text or generic logos if files don't satisfy
+  { name: "Amazon", src: "/logos/amazon.svg" },
+  { name: "Google", src: "/logos/google.svg" },
+  { name: "Anthropic", src: "/logos/anthropic.svg" },
+  { name: "Marriott", src: "/logos/marriott.svg" },
+  { name: "Shopify", src: "/logos/shopify.svg" },
+]
 
 export const HeroSection = () => {
   return (
-    <section>
-      <div className="container flex min-h-[100svh] flex-col justify-end gap-y-16 py-16 md:gap-y-32 md:py-32">
+    <section className="bg-gradient-to-br from-stripe-purple via-purple-500 to-stripe-teal md:bg-none">
+      {/* Mobile Layout (Stripe Style) */}
+      <div className="container flex min-h-[100svh] flex-col justify-center gap-y-8 py-32 text-white md:hidden">
+         <h1 className="text-5xl font-bold leading-[1.1] tracking-tight">
+            Financial infrastructure to grow your revenue
+         </h1>
+         <p className="text-lg leading-relaxed text-white/90">
+            Join the millions of companies that use Stripe to accept payments online and in person, embed financial services, power custom revenue models, and build a more profitable business.
+         </p>
+         <div className="flex flex-wrap items-center gap-4">
+            <Button className="rounded-full bg-stripe-dark-blue px-6 py-6 text-base font-medium hover:bg-stripe-dark-blue/90">
+              Start now <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button variant="link" className="px-0 text-base font-medium text-white hover:text-white/90 decoration-transparent">
+              Contact sales <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+         </div>
+         
+         <div className="mt-12 grid grid-cols-2 gap-8 gap-y-12 opacity-90">
+            {/* Using text for logos to avoid broken images if assets missing, mimicking the clean look */}
+            <h3 className="text-2xl font-bold">OpenAl</h3>
+            <h3 className="text-2xl font-bold">amazon</h3>
+            <h3 className="text-2xl font-bold">Google</h3>
+            <h3 className="text-2xl font-bold">ANTHROP\C</h3>
+            <h3 className="text-2xl font-bold">Marriott</h3>
+            <h3 className="text-2xl font-bold">shopify</h3>
+         </div>
+      </div>
+
+      {/* Desktop Layout (Original) */}
+      <div className="container hidden min-h-[100svh] flex-col justify-end gap-y-16 py-16 md:flex md:gap-y-32 md:py-32">
         <div className="max-w-7xl text-4xl font-semibold leading-tight tracking-tight md:text-huge/tight text-foreground/90">
           <TextSlideUpByWord
             delay={1}

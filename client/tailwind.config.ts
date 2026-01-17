@@ -63,6 +63,11 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        "stripe-purple": "#635bff",
+        "stripe-dark-blue": "#0a2540",
+        "stripe-teal": "#00d4ff",
+        "stripe-accent-purple": "#e0e8ff", // Light purple for tags
+        "stripe-text-purple": "#635bff",
       },
       fontSize: {
         normal: "1rem",
