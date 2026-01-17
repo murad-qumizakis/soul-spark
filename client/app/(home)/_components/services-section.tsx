@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { BarChart, Code, Globe, Layers, Smartphone, Zap } from "lucide-react"
 import { TextSlideUpByText, TextSlideUpByWord } from "@/components/higher-order-text-animate-components"
 import { AnimatedButton as Button } from "@/components/ui/animated-button"
 import { Badge } from "@/components/ui/badge"
@@ -15,22 +16,35 @@ export function ServicesSection() {
       {/* Mobile Layout (Stripe Modular) */}
       <div className="flex flex-col gap-8 md:hidden">
         <div>
-          <h4 className="text-base font-bold text-stripe-purple">Modular solutions</h4>
+          <h4 className="text-base font-bold text-stripe-purple">Holistic design</h4>
         </div>
         <h2 className="text-4xl font-bold leading-tight text-stripe-dark-blue">
-            A fully integrated suite of financial and payments products
+            A complete suite of digital services.
         </h2>
         <p className="text-lg leading-relaxed text-muted-foreground">
-            Reduce costs, grow revenue, and run your business more efficiently on a fully integrated, AI-powered platform. Use Stripe to handle all of your payments-related needs, manage revenue operations, and launch (or invent) new business models.
+            From initial concept to final deployment, we provide end-to-end design and development solutions tailored to your unique needs. We combine strategy, design, and technology to build products that scale.
         </p>
 
         <div className="grid grid-cols-3 gap-4">
-             {/* Mocking the icon grid from screenshot */}
-             {[1, 2, 3, 4, 5, 6].map(i => (
-                 <div key={i} className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center">
-                    <div className="size-8 rounded-full bg-slate-100"></div>
-                 </div>
-             ))}
+             {/* Agency Service Icons */}
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <Layers className="size-8" />
+             </div>
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <Code className="size-8" />
+             </div>
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <Smartphone className="size-8" />
+             </div>
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <Zap className="size-8" />
+             </div>
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <Globe className="size-8" />
+             </div>
+             <div className="aspect-square rounded-xl border bg-background shadow-sm flex items-center justify-center text-stripe-purple">
+                <BarChart className="size-8" />
+             </div>
         </div>
       </div>
 
