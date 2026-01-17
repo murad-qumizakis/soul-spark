@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: "soul-spark-production.up.railway.app",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 }
