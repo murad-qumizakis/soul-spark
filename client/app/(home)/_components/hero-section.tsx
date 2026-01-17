@@ -24,17 +24,17 @@ export const HeroSection = () => {
       {/* Mobile Layout (Stripe Style) */}
       <div className="container flex min-h-[100svh] flex-col justify-center gap-y-8 py-32 text-white md:hidden">
          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight">
-            Financial infrastructure to grow your revenue
+            Building digital experiences that matter.
          </h1>
          <p className="text-lg leading-relaxed text-white/90">
-            Join the millions of companies that use Stripe to accept payments online and in person, embed financial services, power custom revenue models, and build a more profitable business.
+            We help ambitious brands define their digital strategy and build products that drive real growth. From initial concept to final deployment, we provide end-to-end solutions.
          </p>
          <div className="flex flex-wrap items-center gap-4">
             <Button className="rounded-full bg-stripe-dark-blue px-6 py-6 text-base font-medium hover:bg-stripe-dark-blue/90">
-              Start now <ArrowRight className="ml-2 h-4 w-4" />
+              Start a project <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button variant="link" className="px-0 text-base font-medium text-white hover:text-white/90 decoration-transparent">
-              Contact sales <ArrowRight className="ml-2 h-4 w-4" />
+              View our work <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
          </div>
          

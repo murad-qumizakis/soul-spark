@@ -10,31 +10,31 @@ export function AchievementsSection() {
       {/* Mobile Layout (Stripe Global Scale) */}
       <div className="container py-24 md:hidden">
          <div className="mb-6">
-            <h4 className="text-base font-bold text-stripe-teal">Global scale</h4>
+            <h4 className="text-base font-bold text-stripe-teal">Proven impact</h4>
          </div>
          <h2 className="mb-12 text-4xl font-bold leading-tight">
-            The backbone for global commerce
+            The partners for digital growth
          </h2>
          <p className="mb-12 text-lg text-white/80">
-            Stripe makes moving money as easy and programmable as moving data. Our teams are based in offices around the world and we process hundreds of billions of euros each year for ambitious businesses of all sizes.
+            We collaborate with companies of all sizes to solve complex challenges and deliver results that matter. We combine creativity and data to build digital products that drive growth and engagement.
          </p>
 
          <div className="space-y-8">
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">500M+</h3>
-                <p className="mt-2 text-white/70">API requests per day, peaking at 13,000 requests a second.</p>
+                <h3 className="text-3xl font-bold">300+</h3>
+                <p className="mt-2 text-white/70">Projects launched across various industries.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">99.999%</h3>
-                <p className="mt-2 text-white/70">historical uptime for <span className="text-stripe-teal">Stripe services</span>.</p>
+                <h3 className="text-3xl font-bold">98%</h3>
+                <p className="mt-2 text-white/70">Client retention rate over the last 5 years.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">47+</h3>
-                <p className="mt-2 text-white/70">countries with local acquiring.</p>
+                <h3 className="text-3xl font-bold">15+</h3>
+                <p className="mt-2 text-white/70">Industry awards for design and innovation.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">135+</h3>
-                <p className="mt-2 text-white/70">currencies and payment methods supported.</p>
+                <h3 className="text-3xl font-bold">10x</h3>
+                <p className="mt-2 text-white/70">Average ROI for our e-commerce clients.</p>
             </div>
          </div>
       </div>
