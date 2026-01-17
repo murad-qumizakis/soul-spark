@@ -29,18 +29,21 @@ export function Footer() {
               <Link
                 href="#"
                 target="_blank"
+                aria-label="Instagram"
                 className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
                 <Instagram size={24} />
               </Link>
               <Link
                 href="#"
                 target="_blank"
+                aria-label="Facebook"
                 className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
                 <Facebook size={24} />
               </Link>
               <Link
                 href="#"
                 target="_blank"
+                aria-label="Twitter"
                 className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
                 <Twitter size={24} />
               </Link>

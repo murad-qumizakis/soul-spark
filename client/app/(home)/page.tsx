@@ -13,8 +13,6 @@ import { TrustSection } from "./_components/trust-section"
 import { WhatWeDoSection } from "./_components/what-we-do-section"
 import { ContactSection } from "./_components/contact-section"
 
-export const dynamic = "force-dynamic"
-
 const Page = async () => {
   const [projectsRes, testimonialsRes] = await Promise.all([getProjects(), getTestimonials()])
 
@@ -27,7 +25,7 @@ const Page = async () => {
     throw new Error(testimonialsRes.error)
   }
   return (
-    <>
+    <main>
       <HeroSection />
       <OurWorksSection projects={projectsRes.data} />
       <WhatWeDoSection />
@@ -46,7 +44,7 @@ const Page = async () => {
       <ServicesSection />
       <TestimonialsSection testimonials={testimonialsRes.data} />
       <ContactSection />
-    </>
+    </main>
   )
 }
 
