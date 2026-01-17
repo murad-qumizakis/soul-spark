@@ -43,10 +43,7 @@ export function Header() {
     </>
   )
 }
-      {/* Background blur div removed as we are applying styles directly to header for better control */}
-    </>
-  )
-}
+
 
 export function Logo({ className, ...props }: { className?: string } & React.SVGProps<SVGSVGElement>) {
   return (
