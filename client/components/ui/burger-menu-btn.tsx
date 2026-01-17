@@ -50,6 +50,7 @@ export function BurgerMenuBtn({ ref, className, ...props }: HTMLMotionProps<"but
       // whileHover="hovered"
       ref={ref}
       onHoverStart={onHoverStart}
+      aria-label="Open Menu"
       className={cn(
         "relative inline-flex size-10 items-center justify-center overflow-hidden rounded-full border border-[#71777e]",
         className
