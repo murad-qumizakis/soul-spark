@@ -5,13 +5,17 @@ import { cn } from "@/lib/utils"
 import useDetectScroll from "@smakss/react-scroll-direction"
 import { createContext, forwardRef, useContext, useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { DialogContent, DialogRoot, DialogTrigger } from "./dialog-menu"
 import { AnimatedLink } from "@/components/ui/animated-button"
 import { BurgerMenuBtn } from "./ui/burger-menu-btn"
 
 export function Header() {
   const { scrollDir, scrollPosition } = useDetectScroll()
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
   const translate = scrollPosition.top === 0 ? 0 : scrollDir === "up" ? 0 : 1
+
   return (
     <>
       <header
@@ -20,7 +24,9 @@ export function Header() {
           "container fixed top-0 z-40 flex h-24 md:h-[150px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-all duration-700",
           scrollPosition.top > 50 
             ? "bg-background/80 backdrop-blur-md shadow-sm h-20 md:h-24 text-foreground" 
-            : "text-white md:text-foreground"
+            : isHomePage 
+              ? "text-white md:text-foreground" // Home: White on mobile, Black on desktop
+              : "text-foreground" // Other pages: Always Black
         )}>
         <Link href="/" className="text-2xl font-bold tracking-tighter md:text-3xl whitespace-nowrap">
           SOULSPARK MEDIA
@@ -28,11 +34,15 @@ export function Header() {
 
         <DialogRoot>
           <DialogTrigger asChild>
-            <BurgerMenuBtn />
+            <BurgerMenuBtn className="shrink-0" />
           </DialogTrigger>
           <DialogContent title="Main Menu"></DialogContent>
         </DialogRoot>
       </header>
+      {/* Background blur div removed as we are applying styles directly to header for better control */}
+    </>
+  )
+}
       {/* Background blur div removed as we are applying styles directly to header for better control */}
     </>
   )
