@@ -7,13 +7,13 @@ import { motion } from "motion/react"
 export function AchievementsSection() {
   return (
     <section>
-      <div className="container py-24 md:py-huge">
+      <div className="container py-24 md:py-24">
         <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between md:gap-8">
           <div>
             <TextSlideUpByWord as="h2" className="variant-h2 max-w-screen-lg text-3xl md:text-6xl">
               Let our experienced team elevate your digital goals
             </TextSlideUpByWord>
-            <div className="mt-12 flex flex-wrap items-center gap-12 md:mt-huge md:gap-16">
+            <div className="mt-12 flex flex-wrap items-center gap-12 md:mt-24 md:gap-16">
               {(
                 [
                   [250, "Five-Star Reviews"],

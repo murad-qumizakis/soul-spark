@@ -11,8 +11,8 @@ const MotionCard = motion.create(Card)
 
 export function ServicesSection() {
   return (
-    <section className="container py-24 md:py-huge">
-      <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-huge">
+    <section className="container py-24 md:py-24">
+      <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-6xl">
         We’re good at
       </TextSlideUpByWord>
       <div className="grid grid-cols-1 gap-12 items-end md:grid-cols-[1fr_minmax(400px,50.75vw)] md:gap-0">

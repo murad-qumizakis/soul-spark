@@ -13,18 +13,18 @@ export function TrustSection() {
       <div className="container py-24 md:py-huge">
         <div className="flex flex-col gap-16 md:flex-row md:items-end md:justify-between md:gap-6">
           <div className="flex flex-col gap-8 md:block md:gap-6">
-            <TextSlideUpByWord as="h2" className="variant-h2 text-3xl md:text-huge">
+            <TextSlideUpByWord as="h2" className="variant-h2 text-3xl md:text-6xl">
               Your Digital Partner
             </TextSlideUpByWord>
-            <TextSlideUpByLine as="h4" className="variant-h4 mt-6 text-lg md:mt-0 md:text-xl">
+            <TextSlideUpByLine as="h4" className="variant-h4 mt-6 text-lg md:mt-0 md:text-xl md:max-w-2xl">
               {`We partner with companies of all sizes to solve\ncomplex business challenges and define their digital\nstrategies and objectives that deliver results. We\nhelp bring ideas to life and create brands, websites\n& digital products that work.`}
             </TextSlideUpByLine>
-            <div className="mt-12 md:mt-huge">
+            <div className="mt-12 md:mt-16">
               <div className="flex items-center gap-6">
                 <div className="flex items-center -space-x-4 md:-space-x-6">
                   {Array.from({ length: 3 }).map((_, i) => (
-                    <Avatar key={i} className="size-10 text-sm md:variant-h5 md:size-auto">
-                      <AvatarImage src="/avatar.png" />
+                    <Avatar key={i} className="size-10 border-2 border-background text-sm md:size-16">
+                      <AvatarImage src="/avatar.png" className="object-cover" />
                       <AvatarFallback>{i}</AvatarFallback>
                     </Avatar>
                   ))}
