@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import useDetectScroll from "@smakss/react-scroll-direction"
 import { createContext, forwardRef, useContext, useState } from "react"
 import Link from "next/link"
+import { DialogContent, DialogRoot, DialogTrigger } from "./dialog-menu"
 import { AnimatedLink } from "@/components/ui/animated-button"
 import { BurgerMenuBtn } from "./ui/burger-menu-btn"
 
