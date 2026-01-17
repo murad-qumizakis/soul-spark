@@ -21,20 +21,20 @@ export function AchievementsSection() {
 
          <div className="space-y-8">
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">300+</h3>
+                <h3 className="text-3xl font-bold">25+</h3>
                 <p className="mt-2 text-white/70">Projects launched across various industries.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">98%</h3>
-                <p className="mt-2 text-white/70">Client retention rate over the last 5 years.</p>
+                <h3 className="text-3xl font-bold">100%</h3>
+                <p className="mt-2 text-white/70">Client satisfaction rate since our launch.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">15+</h3>
-                <p className="mt-2 text-white/70">Industry awards for design and innovation.</p>
+                <h3 className="text-3xl font-bold">2x</h3>
+                <p className="mt-2 text-white/70">Faster delivery compared to traditional agencies.</p>
             </div>
             <div className="border-l-2 border-stripe-teal pl-6">
-                <h3 className="text-3xl font-bold">10x</h3>
-                <p className="mt-2 text-white/70">Average ROI for our e-commerce clients.</p>
+                <h3 className="text-3xl font-bold">24/7</h3>
+                <p className="mt-2 text-white/70">Dedicated support for all our partners.</p>
             </div>
          </div>
       </div>
@@ -49,8 +49,8 @@ export function AchievementsSection() {
             <div className="mt-12 flex flex-wrap items-center gap-12 md:mt-24 md:gap-16">
               {(
                 [
-                  [250, "Five-Star Reviews"],
-                  [10, "In-House Experts"],
+                  [25, "Projects Launched"],
+                  [100, "Client Satisfaction"],
                 ] as const
               ).map(([q, d]) => (
                 <motion.div
@@ -82,7 +82,7 @@ export function AchievementsSection() {
           </div>
           <div className="max-w-full md:max-w-[35.625vw]">
             <h4 className="variant-h4 text-lg leading-relaxed md:text-xl">
-              We have successfully completed over 300+ projects from a variety of industries. In our team, designers
+              We have successfully completed over 25+ projects from a variety of industries. In our team, designers
               work alongside developers and digital strategists, we believe this is our winning recipe for creating
               digital products that make an impact.
             </h4>

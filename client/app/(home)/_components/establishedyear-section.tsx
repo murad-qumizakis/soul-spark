@@ -14,7 +14,7 @@ export function EstablishedYearSection() {
                 ? "ms-[7vw] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
                 : ""
             }>
-            {"Crafting digital\nexperiences\nsince 2004"}
+            {"Crafting digital\nexperiences\nsince 2024"}
           </TextSlideUpByLine>
         </div>
 
