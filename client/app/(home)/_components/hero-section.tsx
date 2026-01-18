@@ -20,32 +20,32 @@ const stripeLogos = [
 
 export const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-stripe-purple via-purple-500 to-stripe-teal md:bg-none">
+    <section className="bg-background md:bg-none">
       {/* Mobile Layout (Stripe Style) */}
-      <div className="container flex min-h-[100svh] flex-col justify-center gap-y-8 py-32 text-white md:hidden">
+      <div className="container flex min-h-[100svh] flex-col justify-center gap-y-8 py-32 text-foreground md:hidden">
          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight">
             Turn Your Digital Presence Into Your Biggest Asset.
          </h1>
-         <p className="text-lg leading-relaxed text-white/90">
+         <p className="text-lg leading-relaxed text-muted-foreground">
             We help ambitious brands build high-converting digital products that scale. From strategy to deployment, we deliver results you can measure.
          </p>
          <div className="flex flex-wrap items-center gap-4">
-            <Button className="rounded-full bg-stripe-dark-blue px-6 py-6 text-base font-medium hover:bg-stripe-dark-blue/90">
+            <Button className="rounded-full bg-primary px-6 py-6 text-base font-medium text-primary-foreground hover:bg-primary/90">
               Start a project <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="link" className="px-0 text-base font-medium text-white hover:text-white/90 decoration-transparent">
+            <Button variant="link" className="px-0 text-base font-medium text-foreground hover:text-foreground/90 decoration-transparent">
               View our work <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
          </div>
          
          <div className="mt-12 grid grid-cols-2 gap-8 gap-y-12 opacity-90">
             {/* Using text for logos to avoid broken images if assets missing, mimicking the clean look */}
-            <h3 className="text-2xl font-bold">OpenAl</h3>
-            <h3 className="text-2xl font-bold">amazon</h3>
-            <h3 className="text-2xl font-bold">Google</h3>
-            <h3 className="text-2xl font-bold">ANTHROP\C</h3>
-            <h3 className="text-2xl font-bold">Marriott</h3>
-            <h3 className="text-2xl font-bold">shopify</h3>
+            <h3 className="text-2xl font-bold text-foreground">OpenAl</h3>
+            <h3 className="text-2xl font-bold text-foreground">amazon</h3>
+            <h3 className="text-2xl font-bold text-foreground">Google</h3>
+            <h3 className="text-2xl font-bold text-foreground">ANTHROP\C</h3>
+            <h3 className="text-2xl font-bold text-foreground">Marriott</h3>
+            <h3 className="text-2xl font-bold text-foreground">shopify</h3>
          </div>
       </div>
 
