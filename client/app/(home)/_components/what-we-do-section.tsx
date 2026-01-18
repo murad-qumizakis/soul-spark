@@ -11,7 +11,7 @@ export function WhatWeDoSection() {
     <section className="bg-[#111111] bg-radialToBr text-primary-foreground">
       <div className="container py-24 md:py-[7.5vw]">
         <TextSlideUpByWord as="h5" className="variant-h5 mb-8 overflow-y-hidden md:mb-4">
-          Our team of experts can help you with...
+          Full-Service Digital Growth
         </TextSlideUpByWord>
         <div className="space-y-8 md:space-y-4">
           {categories.map((category) =>
@@ -84,8 +84,7 @@ export function WhatWeDoSection() {
               Creative Agency
             </TextSlideUpByLine>
             <h5 className="variant-h5 text-lg leading-relaxed md:text-2xl">
-              We’re an award-winning creative agency based in London, focused on E-Commerce, Web Design London, Digital
-              Products, Branding and SEO.
+              We help brands scale through high-converting E-Commerce, strategic Web Design, and data-driven Digital Products.
             </h5>
           </div>
           <div className="flex flex-wrap gap-4 md:flex-nowrap">

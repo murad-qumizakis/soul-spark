@@ -51,7 +51,7 @@ export function ServicesSection() {
       {/* Desktop Layout (Original) */}
       <div className="hidden md:block">
       <TextSlideUpByWord as="h2" className="variant-h2 text-4xl md:text-6xl">
-        We’re good at
+        Everything you need to scale
       </TextSlideUpByWord>
       <div className="grid grid-cols-1 gap-12 items-end md:grid-cols-[1fr_minmax(400px,50.75vw)] md:gap-0">
         <div>
@@ -83,7 +83,7 @@ export function ServicesSection() {
             variants={{ visible: { opacity: 1 }, hidden: { opacity: 0 } }}
             className="p-8 md:p-16">
             <h3 className="text-2xl font-medium md:variant-h3">
-              Let's start with a conversation about how we can help you! Get in touch, we're a nice bunch.
+              Ready to transform your digital presence? Let's discuss your growth strategy.
             </h3>
             <div className="mt-8 flex flex-col items-start gap-4 md:flex-row md:items-center">
               <Button variant="ghost" className="w-full py-4 md:w-auto">

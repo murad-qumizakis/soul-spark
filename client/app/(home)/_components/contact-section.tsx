@@ -63,7 +63,7 @@ export function ContactSection() {
             transition={{ duration: 0.5 }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
           >
-            Get in Touch
+            Ready to Scale?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export function ContactSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-6 text-muted-foreground md:text-xl"
           >
-            Have a project in mind? Let's build something amazing together.
+            Tell us about your goals. We'll show you how we can help you hit them.
           </motion.p>
         </div>
         <motion.div 

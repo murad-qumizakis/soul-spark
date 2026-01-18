@@ -24,10 +24,10 @@ export const HeroSection = () => {
       {/* Mobile Layout (Stripe Style) */}
       <div className="container flex min-h-[100svh] flex-col justify-center gap-y-8 py-32 text-white md:hidden">
          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight">
-            Building digital experiences that matter.
+            Turn Your Digital Presence Into Your Biggest Asset.
          </h1>
          <p className="text-lg leading-relaxed text-white/90">
-            We help ambitious brands define their digital strategy and build products that drive real growth. From initial concept to final deployment, we provide end-to-end solutions.
+            We help ambitious brands build high-converting digital products that scale. From strategy to deployment, we deliver results you can measure.
          </p>
          <div className="flex flex-wrap items-center gap-4">
             <Button className="rounded-full bg-stripe-dark-blue px-6 py-6 text-base font-medium hover:bg-stripe-dark-blue/90">
@@ -60,7 +60,7 @@ export const HeroSection = () => {
                 ? "animate-gradientMove bg-gradient-to-r from-primary via-secondary to-primary bg-[length:1600px_100%] bg-clip-text text-transparent"
                 : ""
             }>
-            Web & Video Experiences That Drive Connection.
+            Web & Video Experiences That Drive Revenue.
           </TextSlideUpByWord>
         </div>
 
@@ -70,7 +70,7 @@ export const HeroSection = () => {
           </BlockSlideUp>
           <BlockSlideUp containerClassName="ms-0 md:ms-auto max-w-lg" transition={{ delay: 1, duration: 0.3 }}>
             <p className="text-lg leading-relaxed text-foreground md:text-[28.8px]">
-              We build engaging websites, brands & innovative e-commerce solutions.
+              We help ambitious brands build high-converting digital products that scale. From strategy to deployment, we deliver results you can measure.
             </p>
           </BlockSlideUp>
           <BlockSlideUp transition={{ delay: 1, duration: 0.3 }}>

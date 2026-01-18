@@ -14,10 +14,10 @@ export function TrustSection() {
         <div className="flex flex-col gap-16 md:flex-row md:items-end md:justify-between md:gap-6">
           <div className="flex flex-col gap-8 md:block md:gap-6">
             <TextSlideUpByWord as="h2" className="variant-h2 text-3xl md:text-6xl">
-              Your Digital Partner
+              Trusted by Industry Leaders
             </TextSlideUpByWord>
             <TextSlideUpByLine as="h4" className="variant-h4 mt-6 text-lg md:mt-0 md:text-xl md:max-w-2xl">
-              {`We partner with companies of all sizes to solve\ncomplex business challenges and define their digital\nstrategies and objectives that deliver results. We\nhelp bring ideas to life and create brands, websites\n& digital products that work.`}
+              {`We partner with companies of all sizes to solve\ncomplex business challenges. From startups to\nglobal brands, we deliver digital products that\ndrive tangible results.`}
             </TextSlideUpByLine>
             <div className="mt-12 md:mt-16">
               <div className="flex items-center gap-6">
@@ -47,7 +47,7 @@ export function TrustSection() {
               className="flex flex-col divide-y-2 divide-x-0 p-8 md:flex-row md:divide-x-2 md:divide-y-0 md:p-16">
               {(
                 [
-                  [20, "Years on the market"],
+                  [20, "Years Combined Experience"],
                   [500, "Satisfied Customers"],
                 ] as const
               ).map((item) => (

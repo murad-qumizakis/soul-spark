@@ -82,9 +82,7 @@ export function AchievementsSection() {
           </div>
           <div className="max-w-full md:max-w-[35.625vw]">
             <h4 className="variant-h4 text-lg leading-relaxed md:text-xl">
-              We have successfully completed over 25+ projects from a variety of industries. In our team, designers
-              work alongside developers and digital strategists, we believe this is our winning recipe for creating
-              digital products that make an impact.
+              We move 2x faster than traditional agencies. With 24/7 dedicated support and a data-driven approach, we help you launch quickly and scale efficiently.
             </h4>
           </div>
         </div>
